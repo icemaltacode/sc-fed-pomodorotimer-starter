@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import { createContext, useContext, useState, useEffect } from 'react';
+import useToggle from './hooks/useToggle';
+import { Section } from './ui/Section';
+import Heading from './ui/Heading';
+import TomatoClock from './ui/TomatoClock';
 import './App.css';
 
+const AppContext = createContext();
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  return <div className='container'>
+    <Section>
+      <Heading role='secondary'>Pomodoro Timer</Heading>
+    </Section>
+    <Section role='tertiary'>
+      <div className='row'>
+        <div className='col col-xs-12 col-md-3'>
+          {/* The timer goes here */}
+        </div>
+        <div className='col col-xs-12 col-md-6'>
+          <div className='card h-100'>
+            <div className='card-body'>
+              {/* The task list goes here */}
+            </div>
+          </div>
+        </div>
+        <div className='col col-xs-12 col-md-3'>
+          <div className='card h-100'>
+            <div className='card-body'>
+              {/* The stats go here */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+</div>
 }
 
 export default App;
