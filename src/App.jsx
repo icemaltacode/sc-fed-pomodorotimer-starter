@@ -1,8 +1,8 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import useToggle from './hooks/useToggle';
-import { Section } from './ui/Section';
-import Heading from './ui/Heading';
-import TomatoClock from './ui/TomatoClock';
+import useToggle from './hooks/useToggle.jsx';
+import { Section } from './ui/Section.jsx';
+import Heading from './ui/Heading.jsx';
+import TomatoClock from './ui/TomatoClock.jsx';
 import './App.css';
 
 const AppContext = createContext();
